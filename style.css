@@ -64,9 +64,9 @@ body {
 
 .logo h1 {
     font-family: var(--font-logo);
-    font-size: 7rem; /* Made slightly larger as per image */
+    font-size: 7rem;
     font-weight: 700;
-    letter-spacing: -4px;
+    letter-spacing:1px; /* Added letter spacing as requested */
     line-height: 1;
     margin-bottom: -5px;
 }
