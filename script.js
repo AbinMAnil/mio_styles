@@ -1,6 +1,5 @@
-// Set the target date to 1 month (30 days) from now
-const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 30);
+// Set the target date to June 10, 2026
+const targetDate = new Date('June 10, 2026 00:00:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();

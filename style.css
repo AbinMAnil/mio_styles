@@ -23,8 +23,7 @@ html, body {
 }
 
 body {
-    background: url('landscape_bg.png') no-repeat center center; /* Default for desktop */
-    background-size: cover;
+    background: #111; /* Fallback color */
     color: var(--primary-color);
     font-family: var(--font-main);
     display: flex;
@@ -32,8 +31,25 @@ body {
     align-items: center;
 }
 
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -181,7 +197,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    body { background-image: url('bg_image.png'); } /* Use portrait bg for mobile */
     .logo { margin-top: 0; } /* Removed margin top for mobile */
     .logo h1 { font-size: 2.5rem; }
     .style-container { max-width: 250px; gap: 10px; }
